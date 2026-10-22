@@ -1,0 +1,34 @@
+{
+    "name": "gutterwall/bmlt-localities-by-service-body",
+    "description": "BMLT Localities by Service Body: a WordPress list of meeting localities by service body and state, with a fake BMLT root server for testing.",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.6",
+        "yoast/phpunit-polyfills": "^2.0",
+        "wp-coding-standards/wpcs": "^3.1",
+        "phpcompatibility/phpcompatibility-wp": "^2.1",
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+        "phpstan/phpstan": "^2.1",
+        "szepeviktor/phpstan-wordpress": "^2.0",
+        "phpstan/extension-installer": "^1.4"
+    },
+    "scripts": {
+        "test": "phpunit -c tests/wordpress/phpunit.xml.dist",
+        "lint": "phpcs",
+        "analyse": "phpstan analyse --memory-limit=2G"
+    },
+    "config": {
+        "sort-packages": true,
+        "platform": {
+            "php": "7.4.33"
+        },
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "phpstan/extension-installer": true
+        }
+    }
+}

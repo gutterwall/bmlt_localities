@@ -1,0 +1,9 @@
+parameters:
+    level: 6
+    phpVersion: 70400
+    paths:
+        - bmlt-localities-by-service-body
+        - fake-bmlt
+    treatPhpDocTypesAsCertain: false
+    ignoreErrors:
+        - identifier: missingType.iterableValue
