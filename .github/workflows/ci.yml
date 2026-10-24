@@ -4,7 +4,7 @@
 #   lint       WordPress security rules and PHP 7.4+ compatibility (phpcs), PHPStan, dependency audit, secret scan,
 #              and the release build (versions agree, zip and checksums)
 #   wordpress  the WordPress integration tests, the plugin's BMLT requests answered by the fake BMLT root server:
-#              oldest supported WordPress on the oldest supported PHP, latest WordPress on PHP 8.1-8.4, multisite,
+#              oldest supported WordPress on the oldest supported PHP, latest WordPress on PHP 8.1-8.5, multisite,
 #              MySQL and MariaDB
 #   e2e        the release zip on Apache and nginx, with the fake BMLT server behind HTTPS and headless Chrome
 # Tags: the zip built here gets a provenance attestation, and that is the zip that is published.
@@ -85,6 +85,8 @@ jobs:
           - { php: '8.2', wp: 'latest', multisite: '1', db: 'mysql:8.0' }
           - { php: '8.3', wp: 'latest', multisite: '0', db: 'mariadb:10.6' }
           - { php: '8.4', wp: 'latest', multisite: '1', db: 'mariadb:11.4' }
+          - { php: '8.5', wp: 'latest', multisite: '0', db: 'mariadb:11.8' }
+          - { php: '8.5', wp: 'latest', multisite: '1', db: 'mariadb:11.8' }
     services:
       db:
         image: ${{ matrix.db }}
